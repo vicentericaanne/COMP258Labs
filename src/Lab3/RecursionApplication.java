@@ -47,11 +47,12 @@ public class RecursionApplication {
     }
 
     public static boolean isPalindrome(String s, int start, int end) {
-        if (s.charAt(start) != s.charAt(end)) {
-            return false;
-        } else if (start > end) {
+        if (start >= end) {
             return true;
+        } else if (s.charAt(start) != s.charAt(end)) {
+            return false;
         }
+
         return isPalindrome(s, start + 1, end - 1);
     }
 
@@ -71,37 +72,37 @@ public class RecursionApplication {
     }
 
     public static void indentoTron(int n) {
-        indentoTron(n,1);
+        indentoTron(n, 1);
     }
-    
+
     public static void indentoTron(int n, int callNumber) {
-        if (callNumber > n){
+        if (callNumber > n) {
             return;
         }
-        
-        String indent = " ".repeat(callNumber - 1);
-        System.out.println(indent + "This was written by call number " + callNumber + ",");
-        
+
+        String indent = "  ".repeat(callNumber - 1);
+        System.out.println(indent + "This was written by call number " + callNumber + ".");
+
         indentoTron(n, callNumber + 1);
-        
-        System.out.println(indent + "This ALSO written by call number " + callNumber + ",");
+
+        System.out.println(indent + "This ALSO written by call number " + callNumber + ".");
     }
-    
-    public static int fibonacci(int n){
-        if (n<0) {
+
+    public static int fibonacci(int n) {
+        if (n < 0) {
             throw new IllegalArgumentException(
-            "Enter a non-negative number.");
+                    "Enter a non-negative number.");
         }
-        
+
         if (n == 0) {
             return 0;
         } else if (n == 1) {
             return 1;
         }
-                                         
-        return fibonacci(n-1) + fibonacci(n-2);
+
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
-    
+
     public static void main(String[] args) {
         System.out.println("Sum of numbers between 1 and 20 = " + sumNumbersTo(20));
         System.out.println("5! = " + factorial(5));
