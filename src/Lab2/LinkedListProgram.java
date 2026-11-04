@@ -6,8 +6,8 @@ package Lab2;
 
 import Framework.ConsoleFramework;
 import comp258labs.ArrayManager;
-import comp258labs.OutOfBoundsException;
-import comp258labs.NoItemsException;
+import Exceptions.OutOfBoundsException;
+import Exceptions.NoItemsException;
 
 /**
  *

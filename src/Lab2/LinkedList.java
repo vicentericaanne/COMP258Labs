@@ -4,7 +4,7 @@
  */
 package Lab2;
 
-import comp258labs.NoItemsException;
+import Exceptions.NoItemsException;
 
 /**
  *

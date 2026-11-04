@@ -4,6 +4,9 @@
  */
 package comp258labs;
 
+import Exceptions.OutOfBoundsException;
+import Exceptions.NoItemsException;
+
 /**
  *
  * @author ricaa
